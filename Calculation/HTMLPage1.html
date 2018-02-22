@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        body{
+            text-align:center;
+            margin:150px;
+        }
+
+        #form {
+            width: 50%;
+            margin: 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            background-color:beige;
+            border-width: 5px;
+            padding: 30px;
+            text-align: center;
+            border-radius:10px;
+            
+        }
+
+        #result, p {
+            text-decoration:double;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:medium;
+            
+            
+
+        }
+
+        .inputs {
+            width:40%;
+            border-color:lightgrey;
+            border-radius: 5px;
+            padding:5px;
+            margin-right:4px;
+
+
+        }
+
+        #buttons {
+            margin-top:10px;
+            border-color:lightgrey;
+            background-color:azure;
+            margin-right:4px;
+            width:100px;
+            border-radius:5px;
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+
+    <script>
+
+        
+
+        function Sum() {
+
+            var element = document.getElementById("param1").value;
+            var element2 = document.getElementById("param2").value;
+            var result = document.getElementById("result");
+
+            if (element == "" || element2 == "") {
+
+                alert("Missing value");
+            }
+
+            else {
+
+                result.innerText = (Number(element) + Number(element2)).toFixed(2);
+
+            }
+  
+        }
+
+
+        function Subtraction() {
+
+            var element = document.getElementById("param1").value;
+            var element2 = document.getElementById("param2").value;
+            var result = document.getElementById("result");
+
+            if (element == "" || element2 == "") {
+
+                alert("Missing value");
+            }
+
+            else {
+
+                result.innerText = (element - element2).toFixed(2);
+
+            }
+
+        }
+
+
+        function Multiplication() {
+
+            var element = document.getElementById("param1").value;
+            var element2 = document.getElementById("param2").value;
+            var result = document.getElementById("result");
+
+            if (element == "" || element2 == "") {
+
+                alert("Missing value");
+            }
+
+            else {
+
+                result.innerText = (element * element2).toFixed(2);
+
+            }
+
+        }
+
+
+        function Division() {
+
+            var element = document.getElementById("param1").value;
+            var element2 = document.getElementById("param2").value;
+            var result = document.getElementById("result");
+
+
+            if (element == "" || element2 == "") {
+
+                alert("Missing value");
+            }
+
+            else if (element2 == 0) {
+
+                alert("Can not be divided by 0");
+            }
+
+            else {
+
+                result.innerText = (element / element2).toFixed(2);
+
+            }
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <form id="form">
+
+
+        <input id="param1" class="inputs" type="text" />
+        <input id="param2" class="inputs" type="text" /><br />
+
+
+        <input type="button" id="buttons" value="Summation" onclick="Sum()" />
+        <input type="button" id="buttons" value="Subtraction" onclick="Subtraction()" />
+        <input type="button" id="buttons" value="Multiplication" onclick="Multiplication()" />
+        <input type="button" id="buttons" value="Division" onclick="Division()" />
+
+
+
+        <p>Result: <span id="result"></span> </p>
+        
+
+    </form>
+
+
+
+
+
+</body>
+</html>
